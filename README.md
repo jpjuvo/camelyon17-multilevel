@@ -3,9 +3,9 @@
 Deep learning algorithms have proven to be efficient and accurate when detecting
 metastases in hematoxylin and eosin-stained tissue, and their performance is comparable to
 the level of an expert pathologist. Many of the tumor-detecting deep learning algorithms
-focus on the local features that are in the small batches of images. This leaves out
+focus on the local features that are in the small batches of images, which leaves out
 potentially relevant features from the surroundings.[1] For example, the eosinophils are
-common in some parts of a tissue sample whereas some parts can indicate a tumor or other
+characteristic in some parts of a tissue sample, whereas some parts can indicate a tumor or other
 disease. Small image batches may not contain enough spatial information for this.
 
 ## Research questions
@@ -20,10 +20,10 @@ improves the detection performance. High zoom level parts of the network will fo
 detailed structures while the low zoom levels will focus more on regional structures.
 
 ## Methodology
-1. Design one or two convolutional neural network (CNN) architectures that use
-information from different zoom levels. Design one otherwise similar architecture for
-comparison that uses only information from the highest zoom level.
-2. Split Cameleon17 training data set to training, validation and test parts.
+1. Build one or more convolutional neural network (CNN) architectures that use
+information from different zoom levels. Design one, otherwise similar architecture for
+comparison that uses only data from the highest zoom level.
+2. Split Cameleon17 training data set to training, validation, and test parts.
 3. Sample Camelyon17 training and validation set. Sample evenly from tumor and
 normal areas. Sample only from the tissue areas (Otsu or another thresholding
 method).
@@ -33,14 +33,14 @@ classification metric: ROC AUC. Optimize architectures and training
 hyper-parameters.
 6. Predict probability heatmaps for the test set and threshold for tumor detection.
 Measure mean IOU (area of overlap/area of a union) and compare to literature.
-7. Analyze the models by visualizing the gradient class activation mappings
-(Grad-CAM) from the different zoom levels [2].
+7. Analyze the models by visualizing the gradient class activation mappings (Grad-CAM) 
+from the different zoom levels [2].
 8. Transfer models to different cancer if annotated data is available, and measure the
 performance. (not included here)
 
 ----------------------------------------
 
-# GitLab project
+# Project
 
 This section describes the project structure, software dependencies, and notebook contents.
 
@@ -88,7 +88,9 @@ These should be run in order as the preprocessing steps are prerequisites for th
 5. **Dataset** - Sampling splits
 6. **Dataset** - Creating patches
 7. **Normalization** - Normalize H&E staining in patches to compare models with, and without normalization.
-8. **Baseline** - Baseline model
+8. **Baseline** - Baseline models - hyperparameter optimization
+9. **Multilevel** - Multilevel models - hyperparameter optimization
+10. **Pretraining modules** - Pretraining multilevel CNN modules
 
 
 -----------------------------------
