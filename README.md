@@ -104,9 +104,22 @@ The scores are averages from 4 CV folds.
 |05  | DenseNet169 |4+2 epochs   |92.90 |
 |06  | SENet154    |4+2 epochs   |95.73 |
 |07  | InceptionResNetv2    |4+2 epochs   |96.30 |
-|07N  | InceptionResNetv2    |4+2 epochs, Normalized  |96.13 |
-|08N  | SE-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.30 |
-|08  | SE-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.20 |
+|07N | InceptionResNetv2    |4+2 epochs, Normalized  |96.13 |
+|08  | Se-ResNeXt101 32x4d    |4+2 epochs   |96.20 |
+|08N | Se-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.30 |
+|10  | Se-ResNeXt101 32x4d    |1 epoch   |97.27 |
+|13  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.52 |
+
+|id   |Model (context)    |Model (focus) | Description | AUC   |
+|:--:|:-----------:|:----------:|:-----------:|:----:|
+|09  | ResNet18 |ResNet50 |1 epoch, lvls 3 & 0 |96.56 |
+|11  | ResNet34 |ResNet10 |1 epoch ,lvls 3 & 0  |94.34 |
+|12  | ResNet18 |ResNet50 |1 epoch, Normalized ,lvls 3 & 0  |96.96 |
+|13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2  |98.24 |
+|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2  |98.13 |
 
 -----------------------------------
 
