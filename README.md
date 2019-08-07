@@ -100,6 +100,13 @@ The scores are averages from 4 CV folds.
 |01  | DenseNet121 |10+10 epochs |93.02 |
 |02  | DenseNet121 |8+4 epochs   |94.56 |
 |03  | DenseNet121 |4+2 epochs   |94.82 |
+|04  | DenseNet121 |4+2 epochs, Normalized   |94.89 |
+|05  | DenseNet169 |4+2 epochs   |92.90 |
+|06  | SENet154    |4+2 epochs   |95.73 |
+|07  | InceptionResNetv2    |4+2 epochs   |96.30 |
+|07N  | InceptionResNetv2    |4+2 epochs, Normalized  |96.13 |
+|08N  | SE-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.30 |
+|08  | SE-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.20 |
 
 -----------------------------------
 
