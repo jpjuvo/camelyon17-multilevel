@@ -93,7 +93,7 @@ These should be run in order as the preprocessing steps are prerequisites for th
 10. **Pretraining modules** - Pretraining multilevel CNN modules
 
 ## Hyperparam opt. and testing results
-The scores are averages from 4 CV folds.
+The scores are averages from 4 CV folds. Model folds are trained on 3 and tested on one of the train centers (0-3).
 
 **Baseline models**
 
@@ -110,7 +110,7 @@ The scores are averages from 4 CV folds.
 |08  | Se-ResNeXt101 32x4d    |4+2 epochs   |96.20 |
 |08N | Se-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.30 |
 |10  | Se-ResNeXt101 32x4d    |1 epoch   |97.27 |
-|13  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.52 |
+|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.52 |
 
 **Multilevel models**
 
@@ -124,6 +124,23 @@ The scores are averages from 4 CV folds.
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
 |16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.24 |
 |17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.13 |
+
+## Test results
+The scores are average from 3 replicates. Models are trained on all train centers (0-3) and tested on test center (4).
+
+**Baseline models**
+|id   |Model       | Description | AUC_avg | AUC_1 | AUC_2 | AUC_3 |
+|:--:|:-----------:|:-----------:|:----:|:----:|:----:|:----:|
+|10  | Se-ResNeXt101 32x4d    |1 epoch   |95.47 | 96.11 | 95.48 | 94.84 |
+|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized  | |  |  |  |
+
+**Multilevel models**
+|id   |Model (context)    |Model (focus) | Description | AUC_avg | AUC_1 | AUC_2 | AUC_3 |
+|:--:|:-----------:|:----------:|:-----------:|:----:|:----:|:----:|:----:|
+|13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  | | | | |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | | | | |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | | | | |
+|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | | | | |
 
 -----------------------------------
 
