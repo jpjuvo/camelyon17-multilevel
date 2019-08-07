@@ -133,7 +133,7 @@ The scores are average from 3 replicates. Models are trained on all train center
 |id   |Model       | Description | AUC_avg | AUC_1 | AUC_2 | AUC_3 |
 |:--:|:-----------:|:-----------:|:----:|:----:|:----:|:----:|
 |10  | Se-ResNeXt101 32x4d    |1 epoch   |95.47 | 96.11 | 95.48 | 94.84 |
-|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized  | - | - | - | - |
+|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized  | 95.84 | 95.98 | 95.87 | 95.67 |
 
 **Multilevel models**
 
