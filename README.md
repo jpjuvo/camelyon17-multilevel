@@ -95,6 +95,8 @@ These should be run in order as the preprocessing steps are prerequisites for th
 ## Hyperparam opt. and testing results
 The scores are averages from 4 CV folds.
 
+**Baseline models**
+
 |id   |Model       | Description | AUC   |
 |:--:|:-----------:|:-----------:|:----:|
 |01  | DenseNet121 |10+10 epochs |93.02 |
@@ -110,6 +112,8 @@ The scores are averages from 4 CV folds.
 |10  | Se-ResNeXt101 32x4d    |1 epoch   |97.27 |
 |13  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.52 |
 
+**Multilevel models**
+
 |id   |Model (context)    |Model (focus) | Description | AUC   |
 |:--:|:-----------:|:----------:|:-----------:|:----:|
 |09  | ResNet18 |ResNet50 |1 epoch, lvls 3 & 0 |96.56 |
@@ -118,8 +122,8 @@ The scores are averages from 4 CV folds.
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
-|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2  |98.24 |
-|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2  |98.13 |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.24 |
+|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.13 |
 
 -----------------------------------
 
