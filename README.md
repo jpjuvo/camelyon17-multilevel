@@ -92,6 +92,14 @@ These should be run in order as the preprocessing steps are prerequisites for th
 9. **Multilevel** - Multilevel models - hyperparameter optimization
 10. **Pretraining modules** - Pretraining multilevel CNN modules
 
+## Hyperparam opt. and testing results
+The scores are averages from 4 CV folds.
+
+|id   |Model       | Description | AUC   |
+|:--:|:-----------:|:-----------:|:----:|
+|01  | DenseNet121 |10+10 epochs |93.02 |
+|02  | DenseNet121 |8+4 epochs   |94.56 |
+|03  | DenseNet121 |4+2 epochs   |94.82 |
 
 -----------------------------------
 
