@@ -142,8 +142,8 @@ The scores are average from 3 replicates. Models are trained on all train center
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  | 95.53 | 95.71 | 96.17 | 94.69 |
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | 95.99 | 95.25 | 95.83 | 96.89 |
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  | 95.75 | 96.13 | 95.33 | 95.75 |
-|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - | - |
-|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - | - |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 95.99 | 96.14 | 95.72 | 96.12 |
+|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 95.48 | 94.76 | 96.08 | 93.53 |
 
 -----------------------------------
 
