@@ -122,7 +122,7 @@ The scores are averages from 4 CV folds. Model folds are trained on 3 and tested
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
-|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.24 |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |**98.24** |
 |17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.13 |
 
 ## Test results
@@ -140,9 +140,9 @@ The scores are average from 3 replicates. Models are trained on all train center
 |id   |Model (context)    |Model (focus) | Description | AUC_avg | AUC_1 | AUC_2 | AUC_3 |
 |:--:|:-----------:|:----------:|:-----------:|:----:|:----:|:----:|:----:|
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  | 95.53 | 95.71 | 96.17 | 94.69 |
-|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | 95.99 | 95.25 | 95.83 | 96.89 |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | **95.99** | 95.25 | 95.83 | 96.89 |
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  | 95.75 | 96.13 | 95.33 | 95.75 |
-|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 95.99 | 96.14 | 95.72 | 96.12 |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | **95.99** | 96.14 | 95.72 | 96.12 |
 |17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 95.48 | 94.76 | 96.08 | 93.53 |
 
 -----------------------------------
