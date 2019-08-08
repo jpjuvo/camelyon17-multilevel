@@ -140,7 +140,7 @@ The scores are average from 3 replicates. Models are trained on all train center
 |id   |Model (context)    |Model (focus) | Description | AUC_avg | AUC_1 | AUC_2 | AUC_3 |
 |:--:|:-----------:|:----------:|:-----------:|:----:|:----:|:----:|:----:|
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  | 95.53 | 95.71 | 96.17 | 94.69 |
-|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | - | - | - | - |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  | 95.99 | 95.25 | 95.83 | 96.89 |
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  | - | - | - | - |
 |16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - | - |
 |17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - | - |
