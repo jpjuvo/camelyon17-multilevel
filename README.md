@@ -140,8 +140,8 @@ The scores are average from 5 replicates. The standard deviations are calculated
 |id   |Model (context)    |Model (focus) | Description | AUC_AVG | AUC_MAX | AUC_STD |
 |:--:|:-----------:|:----------:|:-----------:|:----:|:----:|:----:|
 |13 | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch ,lvls 3 & 0  | - | - | - |
-|13N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0 | 95.71 | - | - |
-|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch ,lvls 2 & 0  | 96.32 | - | - |
+|13N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0 | 94.76 | 95.98 | 1.49 |
+|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch ,lvls 2 & 0  | 95.55 | 96.87 | 1.34 |
 |14N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0 | 95.25 | - | - |
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  | - | - | - |
 |15N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0 | 96.13 | - | - |
