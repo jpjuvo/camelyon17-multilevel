@@ -109,8 +109,8 @@ The scores are averages from 4 CV folds. Model folds are trained on 3 and tested
 |07N | InceptionResNetv2    |4+2 epochs, Normalized  |96.13 |
 |08  | Se-ResNeXt101 32x4d    |4+2 epochs   |96.20 |
 |08N | Se-ResNeXt101 32x4d    |4+2 epochs, Normalized   |96.30 |
-|10  | Se-ResNeXt101 32x4d    |1 epoch   |97.27 |
-|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.52 |
+|10  | Se-ResNeXt101 32x4d    |1 epoch   |96.85 |
+|10N  | Se-ResNeXt101 32x4d    |1 epoch, Normalized   | 96.04 |
 
 **Multilevel models**
 
