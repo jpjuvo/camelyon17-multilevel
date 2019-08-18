@@ -146,7 +146,7 @@ The scores are average from 5 replicates. The standard deviations are calculated
 |15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, lvls 0 & 0  | - | - | - |
 |15N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0 | 96.42 | 96.75 | 0.37 |
 |16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - |
-|16N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 96.14 | - | - |
+|16N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 96.16 | 96.51 | 0.46 |
 |17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | - | - | - |
 |17N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 94.76 | - | - |
 
