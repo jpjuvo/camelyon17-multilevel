@@ -117,7 +117,7 @@ The scores are averages from 4 CV folds. Model folds are trained on 3 and tested
 |id   |Model (context)    |Model (focus) | Description | AUC   |
 |:--:|:-----------:|:----------:|:-----------:|:----:|
 |09  | ResNet18 |ResNet50 |1 epoch, lvls 3 & 0 |96.56 |
-|11  | ResNet34 |ResNet10 |1 epoch ,lvls 3 & 0  |94.34 |
+|11  | ResNet34 |ResNet101 |1 epoch ,lvls 3 & 0  |94.34 |
 |12  | ResNet18 |ResNet50 |1 epoch, Normalized ,lvls 3 & 0  |96.96 |
 |13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
 |14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
