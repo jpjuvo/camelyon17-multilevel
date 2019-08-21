@@ -119,11 +119,12 @@ The scores are averages from 4 CV folds. Model folds are trained on 3 and tested
 |09  | ResNet18 |ResNet50 |1 epoch, lvls 3 & 0 |96.56 |
 |11  | ResNet34 |ResNet101 |1 epoch ,lvls 3 & 0  |94.34 |
 |12  | ResNet18 |ResNet50 |1 epoch, Normalized ,lvls 3 & 0  |96.96 |
-|13  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
-|14  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
-|15  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
-|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |**98.24** |
-|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder, bottleneck |98.13 |
+|13N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 3 & 0  |97.26 |
+|14N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 2 & 0  |97.43 |
+|15N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0  |96.15 |
+|16N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder |98.24 |
+|16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, lvls 0 & 2 , context model pretrained with autoencoder |**98.88** |
+|17N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder, bottleneck |98.13 |
 
 ## Test results
 The scores are average from 5 replicates. The standard deviations are calculated with ddof=1. Models are trained on all train centers (0-3) and tested on test center (4). Learning rates for the head are 1e-3 unless stated otherwise.
@@ -147,8 +148,8 @@ The scores are average from 5 replicates. The standard deviations are calculated
 |15N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 0 | 96.26 | 96.73 | 0.43 |
 |16  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 95.40 | 95.86 | 0.34 |
 |16N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 96.16 | 96.51 | 0.46 |
-|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, lvls 0 & 2 , context model pretrained with autoencoder | - | - | - |
-|17N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 94.76 | - | - |
+|17  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, lvls 0 & 2 , context model pretrained with autoencoder | 94.98 | 95.92 | 1.27 |
+|17N  | Se-ResNeXt50 |Se-ResNeXt101 |1 epoch, Normalized ,lvls 0 & 2 , context model pretrained with autoencoder | 94.68 | 96.10 | 1.43 |
 
 -----------------------------------
 
