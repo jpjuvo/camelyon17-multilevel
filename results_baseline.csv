@@ -1,0 +1,13 @@
+id  ;Model           ;Normalized ;Epochs - LR (head/finetune)   ;Fold_0 AUC; Fold_1 AUC; Fold_2 AUC; Fold_3 AUC ; AVG AUC 
+"01	 ";"DenseNet121	  ";False      ;10/10 epochs - 3e-3/1e-5; 93.385   ; 86.131      ; 94.808      ; 97.759       ; 93.021    
+"02	 ";"DenseNet121	  ";False      ;8/4 epochs - 3e-3/1e-5  ; 94.985   ; 90.696      ; 94.222      ; 98.337       ; 94.560    
+"03	 ";"DenseNet121	  ";False      ;4/2 epochs - 3e-3/5e-6  ; 90.441   ; 93.447      ;97.445; 97.940       ; 94.818    
+"04	 ";"DenseNet121	  ";False      ;4/2 epochs - 3e-3/5e-6  ; 94.514   ; 95.185      ; 93.049      ; 96.799       ; 94.886    
+"05	 ";"DenseNet169	  ";False      ;4/2 epochs - 3e-3/5e-6  ; 87.867   ; 93.630      ; 92.140      ; 97.965       ; 92.901    
+"06	 ";"SENet154	      ";False      ;4/2 epochs - 3e-3/5e-6  ; 93.994   ; 95.950      ; 94.339      ;98.651; 95.734    
+"07	 ";InceptionResNetv2;False     ;4/2 epochs - 3e-3/5e-6  ; 94.609   ; 96.160      ; 96.321      ; 98.129       ; 96.305    
+07N ;InceptionResNetv2;True      ;4/2 epochs - 3e-3/5e-6  ; 96.156   ; 96.822      ; 94.862      ; 96.670       ; 96.128    
+"08	 ";Se-ResNeXt101 32x4d;False   ;4/2 epochs - 3e-3/5e-6  ; 93.926   ; 95.834      ; 96.660      ; 98.370       ; 96.198    
+08N ;Se-ResNeXt101 32x4d;True    ;4/2 epochs - 3e-3/5e-6  ; 96.578   ;97.092; 94.190      ; 97.351       ; 96.302    
+10;Se-ResNeXt101 32x4d;False   ;1/- epoch - 1e-3/-      ; 97.011   ; 96.710      ; 95.991      ; 97.696       ;96.852
+10N ;Se-ResNeXt101 32x4d;True    ;1/- epoch - 1e-3/-      ;98.227; 94.772      ; 95.201      ; 95.978       ; 96.045    

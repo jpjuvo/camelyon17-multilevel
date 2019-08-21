@@ -1,0 +1,10 @@
+id ;Model (context);Model (focus);Normalized;Epochs - LR (head);Levels;Fold_0 AUC;Fold_1 AUC;Fold_2 AUC;Fold_3 AUC;AVG AUC
+"09	";"ResNet18	    ";"ResNet50	  ";False     ;1 epoch - 3e-3    ;3 & 0 ;98.780; 93.408; 95.614; 98.479; 96.575 
+"11	";"ResNet34	    ";"ResNet101	  ";False     ;1 epoch -  3e-3    ;3 & 0 ; 98.628; 95.820; 84.971; 97.925; 94.336 
+"12N	";"ResNet18	    ";"ResNet50	  ";True      ;1 epoch - 1e-3    ;3 & 0 ; 98.506; 97.642; 95.447; 96.226; 96.955 
+"13N	";"Se-ResNeXt50	";Se-ResNeXt101;True      ;1 epoch - 1e-3    ;3 & 0 ; 98.029; 97.393; 95.928; 97.698; 97.262 
+"14N	";"Se-ResNeXt50	";Se-ResNeXt101;True      ;1 epoch - 2e-3    ;2 & 0 ; 98.779; 97.270; 98.027; 95.648; 97.431 
+"15N	";"Se-ResNeXt50	";Se-ResNeXt101;True      ;1 epoch - 2e-3    ;0 & 0 ; 96.939; 95.904; 96.017; 95.740; 96.150 
+16N ;"Se-ResNeXt50	";Se-ResNeXt101;True      ;1 epoch, 2e-3 - context model pretrained with autoencoder;0 & 2 ; 98.510; 98.599; 98.428; 97.423; 98.240 
+16;"Se-ResNeXt50	";Se-ResNeXt101;False      ;1 epoch, 2e-3 - context model pretrained with autoencoder;0 & 2 ; 98.366;99.270;98.578;99.299;98.878
+17N ;Se-ResNeXt50 + bottleneck;Se-ResNeXt101;True      ;1 epoch, 2e-3 - context model pretrained with autoencoder;0 & 2 ; 98.767; 99.185; 96.644; 97.906; 98.125 
