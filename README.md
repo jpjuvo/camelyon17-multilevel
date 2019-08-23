@@ -134,6 +134,10 @@ The scores are from 4 CV folds (leave one center out cross-validation). Model fo
 |**16** |Se-ResNeXt50	|Se-ResNeXt101|False      |1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0 | 98.366| **99.270**| **98.578**| **99.299**| **98.878** |
 |17N |Se-ResNeXt50 + bottleneck|Se-ResNeXt101|True      |1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0 | 98.767| 99.185| 96.644| 97.906| 98.125 |
 
+![Optim. results](img/optimization_avg_result.png)
+
+- The red dotted line is the best average baseline AUC 
+
 ## Test results
 The scores are from 5 replicates. Models are trained on all train centers (0-3) and tested on test center (4).
 
@@ -161,6 +165,10 @@ Train={`center_0`,`center_1`,`center_2`,`center_3`}, Test={`center_4`}
 |16N|Se-ResNeXt50|Se-ResNeXt101|True|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|95.376|96.361|96.365|96.506|96.367|96.195|
 |17|Se-ResNeXt50 + bottleneck|Se-ResNeXt101|False|1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0|96.465|95.152|95.916|93.565|93.792|94.979|
 |17N|Se-ResNeXt50 + bottleneck|Se-ResNeXt101|True|1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0|96.101|92.645|93.776|95.349|95.523|94.679|
+
+![Test results](img/test_set_avg_result.png)
+
+- The red dotted line is the best average baseline AUC 
 
 -----------------------------------
 
