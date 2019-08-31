@@ -103,6 +103,9 @@ The scores are from 4 CV folds (leave one center out cross-validation). Model fo
 - **Fold_2**: Train={`center_0`,`center_1`,`center_3`}, Validation={`center_2`}
 - **Fold_3**: Train={`center_0`,`center_1`,`center_2`}, Validation={`center_3`}
 
+- id suffix `N` = Trained and tested on normalized data
+- id suffix `A` = Trained on heavily color augmented data
+
 **Baseline models**
 
 |id  |Model           |Normalized |Epochs, LR (head/finetune)   |Fold_0 AUC| Fold_1 AUC| Fold_2 AUC| Fold_3 AUC | AVG AUC |
@@ -119,7 +122,7 @@ The scores are from 4 CV folds (leave one center out cross-validation). Model fo
 |08N |Se-ResNeXt101 32x4d|True    |4/2 epochs, 3e-3/5e-6  | 96.578   | 97.092      | 94.190      | 97.351       | 96.302    |
 |**10**	 |Se-ResNeXt101 32x4d|False   |1/- epoch, 1e-3/-      | 97.011   | 96.710      | 95.991      | 97.696       | 96.852    |
 |10N |Se-ResNeXt101 32x4d|True    |1/- epoch, 1e-3/-      | 98.227   | 94.772      | 95.201      | 95.978       | 96.045    |
-|18 |Se-ResNeXt101 32x4d|False    |1/- epoch, 1e-3/-      | **98.822**   | **97.993**  | 96.143      | 96.468       | **97.356**    |
+|18A |Se-ResNeXt101 32x4d|False    |1/- epoch, 1e-3/-      | **98.822**   | **97.993**  | 96.143      | 96.468       | **97.356**    |
 
 **Multilevel models**
 
@@ -144,13 +147,16 @@ The scores are from 5 replicates. Models are trained on all train centers (0-3) 
 
 Train={`center_0`,`center_1`,`center_2`,`center_3`}, Test={`center_4`}
 
+- id suffix `N` = Trained and tested on normalized data
+- id suffix `A` = Trained on heavily color augmented data
+
 **Baseline models**
 
 |id|Model|Normalized|Epochs, LR (head)|AUC-1|AUC-2|AUC-3|AUC-4|AUC-5|AUC-AVG|
 |:-:|:--:|:--------:|:---------------:|:---:|:---:|:---:|:---:|:---:|:-----:|
 |10|Se-ResNeXt101 32x4d|False|1 epoch, 1e-3|95.452|96.229|96.178|95.888|95.682|95.886|
 |10N|Se-ResNeXt101 32x4d|True|1 epoch, 1e-3|95.808|95.385|95.338|95.695|95.411|95.527|
-|18|Se-ResNeXt101 32x4d|False|1 epoch, 1e-3|97.093|97.347|96.741|96.908|97.086|97.035|
+|18A|Se-ResNeXt101 32x4d|False|1 epoch, 1e-3|97.093|**97.347**|96.741|96.908|97.086|**97.035**|
 
 **Multilevel models**
 
@@ -161,11 +167,14 @@ Train={`center_0`,`center_1`,`center_2`,`center_3`}, Test={`center_4`}
 |14|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|2 & 0|95.108|96.153|96.229|96.456|96.554|96.100|
 |14N|Se-ResNeXt50|Se-ResNeXt101|True|1 epoch, 2e-3|2 & 0|95.622|95.848|95.948|95.865|95.440|95.745|
 |15|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|0 & 0|94.681|94.779|94.018|94.849|94.260|94.518|
-|15N|Se-ResNeXt50|Se-ResNeXt101|True|1 epoch, 2e-3|0 & 0|**96.728**|96.123|95.596|96.338|96.518|**96.261**|
+|15N|Se-ResNeXt50|Se-ResNeXt101|True|1 epoch, 2e-3|0 & 0|96.728|96.123|95.596|96.338|96.518|96.261|
 |16|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|95.543|95.445|95.059|95.078|95.857|95.396|
 |16N|Se-ResNeXt50|Se-ResNeXt101|True|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|95.376|96.361|96.365|96.506|96.367|96.195|
 |17|Se-ResNeXt50 + bottleneck|Se-ResNeXt101|False|1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0|96.465|95.152|95.916|93.565|93.792|94.979|
 |17N|Se-ResNeXt50 + bottleneck|Se-ResNeXt101|True|1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0|96.101|92.645|93.776|95.349|95.523|94.679|
+|19A|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|2 & 0|**98.100**|97.387|97.787|97.921|97.631|**97.765**|
+|20A|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|0 & 0|96.156|96.696|96.320|96.806|96.412|96.478|
+|21|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|96.880|97.681|96.954|96.866|96.842|97.044|
 
 ![Test results](img/test_set_avg_result.png)
 
