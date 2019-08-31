@@ -174,7 +174,7 @@ Train={`center_0`,`center_1`,`center_2`,`center_3`}, Test={`center_4`}
 |17N|Se-ResNeXt50 + bottleneck|Se-ResNeXt101|True|1 epoch, 2e-3  context model pretrained with autoencoder|2 & 0|96.101|92.645|93.776|95.349|95.523|94.679|
 |19A|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|2 & 0|**98.100**|97.387|97.787|97.921|97.631|**97.765**|
 |20A|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3|0 & 0|96.156|96.696|96.320|96.806|96.412|96.478|
-|21|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|96.880|97.681|96.954|96.866|96.842|97.044|
+|21A|Se-ResNeXt50|Se-ResNeXt101|False|1 epoch, 2e-3, context model pretrained with autoencoder|2 & 0|96.880|97.681|96.954|96.866|96.842|97.044|
 
 ![Test results](img/test_set_avg_result.png)
 
