@@ -22,13 +22,13 @@ detailed structures while the low zoom levels will focus more on regional struct
 ## Methodology
 1. Build one or more convolutional neural network (CNN) architectures that use
 information from different zoom levels. Design one, otherwise similar architecture for
-comparison that uses only data from the highest zoom level.
-2. Split Cameleon17 training data set to training, validation, and test parts.
+comparison that uses only data from the highest zoom level (baseline).
+2. Split Cameleon17 training data set to training and test parts (split by centers).
 3. Sample Camelyon17 training and validation set. Sample evenly from tumor and
 normal areas. Sample only from the tissue areas (Otsu or another thresholding
 method).
 4. Sample Cameleon17 test set covering all tissue parts. Overlapping sampling.
-5. Train models and measure the performance on the validation set. Binary
+5. Train models and measure the center-fold cross-validation performance. Binary
 classification metric: ROC AUC. Optimize architectures and training
 hyper-parameters.
 6. Predict probability heatmaps for the test set and threshold for tumor detection.
@@ -116,9 +116,10 @@ The scores are from 4 CV folds (leave one center out cross-validation). Model fo
 |07	 |InceptionResNetv2|False     |4/2 epochs, 3e-3/5e-6  | 94.609   | 96.160      | 96.321      | 98.129       | 96.305    |
 |07N |InceptionResNetv2|True      |4/2 epochs, 3e-3/5e-6  | 96.156   | 96.822      | 94.862      | 96.670       | 96.128    |
 |08	 |Se-ResNeXt101 32x4d|False   |4/2 epochs, 3e-3/5e-6  | 93.926   | 95.834      | 96.660      | 98.370       | 96.198    |
-|08N |Se-ResNeXt101 32x4d|True    |4/2 epochs, 3e-3/5e-6  | 96.578   | **97.092**      | 94.190      | 97.351       | 96.302    |
-|**10**	 |Se-ResNeXt101 32x4d|False   |1/- epoch, 1e-3/-      | 97.011   | 96.710      | 95.991      | 97.696       | **96.852**    |
-|10N |Se-ResNeXt101 32x4d|True    |1/- epoch, 1e-3/-      | **98.227**   | 94.772      | 95.201      | 95.978       | 96.045    |
+|08N |Se-ResNeXt101 32x4d|True    |4/2 epochs, 3e-3/5e-6  | 96.578   | 97.092      | 94.190      | 97.351       | 96.302    |
+|**10**	 |Se-ResNeXt101 32x4d|False   |1/- epoch, 1e-3/-      | 97.011   | 96.710      | 95.991      | 97.696       | 96.852    |
+|10N |Se-ResNeXt101 32x4d|True    |1/- epoch, 1e-3/-      | 98.227   | 94.772      | 95.201      | 95.978       | 96.045    |
+|18 |Se-ResNeXt101 32x4d|False    |1/- epoch, 1e-3/-      | **98.822**   | **97.993**  | 96.143      | 96.468       | **97.356**    |
 
 **Multilevel models**
 
@@ -149,7 +150,7 @@ Train={`center_0`,`center_1`,`center_2`,`center_3`}, Test={`center_4`}
 |:-:|:--:|:--------:|:---------------:|:---:|:---:|:---:|:---:|:---:|:-----:|
 |10|Se-ResNeXt101 32x4d|False|1 epoch, 1e-3|95.452|96.229|96.178|95.888|95.682|95.886|
 |10N|Se-ResNeXt101 32x4d|True|1 epoch, 1e-3|95.808|95.385|95.338|95.695|95.411|95.527|
-
+|18|Se-ResNeXt101 32x4d|False|1 epoch, 1e-3|97.093|97.347|96.741|96.908|97.086|97.035|
 
 **Multilevel models**
 
