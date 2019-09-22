@@ -93,7 +93,9 @@ These should be run in order as the preprocessing steps are prerequisites for th
 10. **Pretraining modules** - Pretraining multilevel CNN modules
 11. **Pretrained multilevel** - Multilevel models with autoencoder pretrained context encoders
 12. **Test** - Test set performance
-13. **Conclusion** - Overview and analysis of the results
+13. **Threshold selection** - Search for the best WSI heatmap binary threshold with the training set.
+14. **WSI heatmap** - Tumor heatmap for the test set tumor WSI's
+15. **Conclusion** - Overview and analysis of the results
 
 ## Hyperparam opt. and testing results
 The scores are from 4 CV folds (leave one center out cross-validation). Model folds are trained on 3 and tested on one of the train centers (0-3).
