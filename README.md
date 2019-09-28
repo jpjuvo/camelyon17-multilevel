@@ -1,12 +1,18 @@
 # Camelyon17 - Multilevel feature fusion in digital pathology
 
+![Tumor instance segmentation](/img/instance_segmentation_demo.png)
+
+*Metastasis instance segmentation that was produced with a multilevel model.*
+
+## Introduction
+
 Deep learning algorithms have proven to be efficient and accurate when detecting
 metastases in hematoxylin and eosin-stained tissue, and their performance is comparable to
 the level of an expert pathologist. Many of the tumor-detecting deep learning algorithms
 focus on the local features that are in the small batches of images, which leaves out
 potentially relevant features from the surroundings.[1] For example, the eosinophils are
 characteristic in some parts of a tissue sample, whereas some parts can indicate a tumor or other
-disease. Small image batches may not contain enough spatial information for this.
+disease. Small image batches may not contain enough spatial information for considering the surroundings.
 
 ## Research questions
 1. Does including information from the surrounding area, improve the performance of
@@ -14,35 +20,39 @@ deep learning tumor detection algorithm?
 2. What features will a deep neural network focus on with different scales, when it is
 trained to detect a tumor?
 
-## Hypothesis
+### Hypothesis
 A deep neural network will learn to use information from a wider receptive field and this
 improves the detection performance. High zoom level parts of the network will focus on the
 detailed structures while the low zoom levels will focus more on regional structures.
 
 ## Methodology
-1. Build one or more convolutional neural network (CNN) architectures that use
-information from different zoom levels. Design one, otherwise similar architecture for
-comparison that uses only data from the highest zoom level (baseline).
-2. Split Cameleon17 training data set to training and test parts (split by centers).
-3. Sample Camelyon17 training and validation set. Sample evenly from tumor and
-normal areas. Sample only from the tissue areas (Otsu or another thresholding
-method).
-4. Sample Cameleon17 test set covering all tissue parts. Overlapping sampling.
-5. Train models and measure the center-fold cross-validation performance. Binary
-classification metric: ROC AUC. Optimize architectures and training
-hyper-parameters.
-6. Predict probability heatmaps for the test set and threshold for tumor detection.
-Measure mean IOU (area of overlap/area of a union) and compare to literature.
-7. Analyze the models by visualizing the gradient class activation mappings (Grad-CAM) 
-from the different zoom levels [2].
-8. Transfer models to different cancer if annotated data is available, and measure the
-performance. (not included here)
 
-----------------------------------------
+### Preprocessing
+[Chameleon17](https://camelyon17.grand-challenge.org/Data/) training data set was divided by medical centers to test (center_4) and train parts (center_0, center_1, center_2, center_3). Whole slide image (WSI) tissue areas were sampled to 256x256 overlapping tiles, where the corners of tile were centers of neighboring tiles. Otsu thresholding was used for finding the tissue areas.
 
-# Project
+Tumor coverage percentages were calculated for each tile, and a 75% threshold was selected for labeling a tile as a tumor or normal. Tiles were undersampled from each medical center so that tumor and normal tiles were represented in equal amounts.
 
-This section describes the project structure, software dependencies, and notebook contents.
+Image crops of size 256x256 were sampled from each tile's center point in 1, 2, 4 and 8 -pixel downsampling rates. Each downsampling crop had the same center point as the tile.
+
+![downsampling](/img/tumor_label.png)
+
+*Downsampling rates with green tumor area annotation. Threshold of 75% in downsampling=1 is used for deciding the tumor label.*
+
+Normalized copies were made from each image crop and normalization was done using color deconvolution to separate haematoxylin and eosin components, and normalizing their amounts using a reference. 
+
+<img src="/img/normalization.png" alt="normalization" width="400"/>
+
+*Tissue samples before and after the staining normalization in two leftmost columns. Two rightmost columns show the separated haematoxylin and eosin stains.*
+
+### Baseline models
+Baseline models were trained to do binary classification (tumor/normal) from crop images and ROC AUC was used as the performance metric. Medical center-fold cross-validation was used for searching the optimal  CNN architecture, learning rate cycle, and training augmentations. Cross-validation was done with the training set of 4 medical centers and only crop images of pixel samplingrate1 were used. The effectiveness of stain normalization was determined by training models with either normalized or original images.
+
+### Multilevel models
+Multi-input (multilevel) models were assembled from the good performing baseline model architectures. These models took two different downsampling rate images as input. Both downsampling rates had the same center, so the models were looking at the same spot from two different zoom scales. Multilevel models consisted of two separate CNN base architectures. One for the context (lower zoom and wider receptive field) and a deeper architecture for the focus (highest zoom). The output vectors from the last convolutional layers of both architectures were combined with linear layers to produce a single binary output.
+
+<img src="/img/multilevel_architecture_two_levels.png" alt="Multilevel architecture" width="500"/>
+
+*Multilevel architecture*
 
 ### Environment used
 - 64bit Ubuntu 16.04.6 LTS (Xenial Xerus) GNU/Linux (virtual)
@@ -58,6 +68,12 @@ This section describes the project structure, software dependencies, and noteboo
 - [OpenSlide](https://openslide.org/download/) 3.4.1 (ASAP 1.8 depends on libopenslide)
 - [ASAP](https://github.com/computationalpathologygroup/ASAP) 1.8 (1.9 does not support the Philips scanner TIFF file format of the `Center_4`)
 - [OpenCV](https://opencv.org/) 4.1.0
+
+----------------------------------------
+
+## Project
+
+This section describes the project structure and notebook contents.
 
 ## Project structure
 This project assumes that the [Camelyon17 training data set](https://camelyon17.grand-challenge.org/Data/) is downloaded and unzipped in the following way:
