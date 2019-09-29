@@ -10,9 +10,7 @@ Deep learning algorithms have proven to be efficient and accurate when detecting
 metastases in hematoxylin and eosin-stained tissue, and their performance is comparable to
 the level of an expert pathologist. Many of the tumor-detecting deep learning algorithms
 focus on the local features that are in the small batches of images, which leaves out
-potentially relevant features from the surroundings.[1] For example, the eosinophils are
-characteristic in some parts of a tissue sample, whereas some parts can indicate a tumor or other
-disease. Small image batches may not contain enough spatial information for considering the surroundings.
+potentially relevant features from the surroundings.[1]
 
 ## Research questions
 1. Does including information from the surrounding area, improve the performance of
